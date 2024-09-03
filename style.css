@@ -7,6 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #222222;
+    position: relative;
 }
 .header{
     width: 100%;
@@ -14,7 +15,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-color: #5c0e69;
-    box-shadow: 0 0 10px #ffffffa1;
+    box-shadow: 0 0 5px #ffffffa1;
     position: fixed;
     top: 0;
     z-index: 5;
@@ -100,7 +101,7 @@ nav a:hover{
     align-items: center;
     justify-content: space-around;
     font-size: 1.5rem;
-    height: 60vh;
+    height: 100%;
 }
 .skils-icons{
     display: grid;
@@ -112,6 +113,7 @@ nav a:hover{
 }
 .skils-icons p i{
     font-size: 2rem;
+    padding: 1rem;
 }
 
 /*projetos*/
@@ -133,13 +135,14 @@ nav a:hover{
 }
 .cards{
     display: grid;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     gap: 1rem;
     height: 100%;
     margin-top: 1rem;
+    max-width: 80%;
 }
 .card{
     box-shadow: 0 0 10px #ffffff6e;
@@ -167,6 +170,7 @@ nav a:hover{
     width: 30%;
     padding: 5px;
     border-radius: 10px;
+    
 
 }
 .cards div{
@@ -226,4 +230,112 @@ nav a:hover{
     font-size: 1.2rem;
     height: 100%;
     padding: 2rem 0;
+}
+#btnMobile{
+    display: none;
+}
+#navMobile{
+    display: none;
+}
+.iconsFooter{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.9rem;
+}
+
+@media (max-width: 768px) {
+    .header{
+        justify-content: space-between;
+        padding: 10px;
+        
+    }
+    .nav-logo img{
+        width: 150px;
+    }
+    .header a{
+      display: none;
+     
+    }
+    #btnMobile{
+        display: block;
+        color: #fff;
+        font-size: 2.5rem;
+        position: absolute;
+        right: 1rem;
+    }
+    #navMobile{
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        color: #fff;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        background-color: #5c0e69;
+        width: 100%;
+        height: 50%;
+        top: 18%;    
+    }
+    #navMobile a{
+        text-decoration: none;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    #navMobile a:hover{
+        text-decoration: none;
+        color: #5c0e69;
+        background-color: #84528d;
+
+    }
+    .active{
+       display: flex;   
+    }
+
+    .sobre {
+        width: 100%;
+    }
+    .skils-icons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 1rem;
+        height: 100%;
+        margin-top: 1rem;
+        max-width: 80%;
+    }
+    .footer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        background-color: #5c0e69;
+        color: #fff;
+        font-size: 1rem;
+        height: 100%;
+        padding: 2rem 0;
+    }
+    .iconsFooter{
+        display: flex;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .icons{
+        font-size: 1rem;
+        display: flex;
+        width: 100%;
+    }
 }
